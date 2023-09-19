@@ -1,8 +1,34 @@
-<div *ngFor="let cycle of cycles" class="card">
-  <div class="card-body">
-    <p class="card-text">{{ cycle.brand }}</p>
-    <p class="card-text">{{ cycle.color }}</p>
-    <p class="card-text">{{ cycle.quantity }}</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
+<app-navbar></app-navbar>
+<main>
+  <div class="cards-group">
+    <div *ngFor="let cycle of cycles" class="card">
+      <img src="https://cdn.pixabay.com/photo/2013/07/13/13/43/racing-bicycle-161449_640.png" class="card-banner" alt="">
+      <div class="card-body">
+        <p class="card-text"><span class="title">Brand:</span> {{ cycle.brand }}</p>
+        <p class="card-text"><span class="title">Color:</span> <span class="shade" [style.background-color]="cycle.color"></span></p>
+        <p class="card-text"><span class="title">stock left:</span>{{ cycle.quantity }}</p>
+        <div class="btn-group">
+          <button (click)="borrow(cycle.id)" appAuthClick class="btn borrow" title="borrow">
+            <fa-icon [icon] = "faArrowUp"></fa-icon>
+          </button>
+          <button (click)="return(cycle.id)" appAuthClick class="btn return" title="return">
+            <fa-icon [icon] = "faArrowDown"></fa-icon>
+          </button>
+        </div>
+        <!-- <input
+          type="number"
+          name="quantity"
+          [(ngModel)]="quantityValue"
+          [value]="quantityValue"
+          *ngIf="authService.isUserAdmin()"
+        />
+        <button
+          *ngIf="authService.isUserAdmin()"
+          (click)="restock(cycle.id, quantityValue)"
+        >
+          restock
+        </button> -->
+      </div>
+    </div>
   </div>
-</div>
+</main>
