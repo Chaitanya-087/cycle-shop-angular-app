@@ -17,16 +17,16 @@ export class CyclesService {
   }
 
   borrowCycle(id: number): Observable<Cycle> {
-    return this.http.put<Cycle>(`${this.baseUrl}/${id}/borrow`,{});
+    return this.http.post<Cycle>(`${this.baseUrl}/${id}/borrow`,{});
   }
 
   returnCycle(id: number): Observable<Cycle> {
-    return this.http.put<Cycle>(`${this.baseUrl}/${id}/return`,{});
+    return this.http.post<Cycle>(`${this.baseUrl}/${id}/return`,{});
   }
 
   restockCycle(id: number, quantity: number): Observable<Cycle> {
     const params = new HttpParams().set('quantity', quantity.toString());
-    return this.http.put<Cycle>(`${this.baseUrl}/${id}/restock`, {}, {params:params});
+    return this.http.post<Cycle>(`${this.baseUrl}/${id}/restock`, {}, {params:params});
   }
   
 }

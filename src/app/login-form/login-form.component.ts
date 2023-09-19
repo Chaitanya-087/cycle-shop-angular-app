@@ -15,7 +15,6 @@ export class LoginFormComponent {
 
   login(loginForm: any): void {
     if (loginForm.invalid) return;
-    console.log(loginForm.value);
     this.authService.login(loginForm.value as LoginForm).subscribe();
   }
 

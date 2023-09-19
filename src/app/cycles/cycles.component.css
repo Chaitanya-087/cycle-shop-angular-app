@@ -1,12 +1,3 @@
-main {
-  min-height: 100vh;
-  width: 100%;
-  max-width: 90%;
-  margin: 0 auto;
-  padding-top: 5rem;
-  padding-bottom: 1rem;
-}
-
 .cards-group {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
@@ -59,7 +50,7 @@ main {
 
 .btn-group {
   position: absolute;
-  bottom: 1rem;
+  bottom: 0.5rem;
   right: 1rem;
   display: flex;
   align-items: center;
@@ -67,13 +58,14 @@ main {
 }
 
 .btn {
+  --size: 24px;
   background-color: transparent;
   border: none;
   outline: none;
   cursor: pointer;
   font-family: Rubik, sans-serif;
-  height: 24px;
-  width: 24px;
+  height: var(--size);
+  width: var(--size);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -89,4 +81,10 @@ main {
 .btn.return {
     color: #f44336;
     border-color: #f44336;
+}
+
+.btn.cart {
+  --size: 30px;
+  border: none;
+  color: #5e3db3;
 }

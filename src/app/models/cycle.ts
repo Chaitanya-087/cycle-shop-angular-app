@@ -3,4 +3,5 @@ export interface Cycle {
     color: string;
     brand: string;
     quantity: number;
+    numBorrowed: number;
 }

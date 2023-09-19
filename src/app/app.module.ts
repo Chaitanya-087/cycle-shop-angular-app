@@ -12,6 +12,9 @@ import { RequestInterceptor } from './request.interceptor';
 import { RestockComponent } from './restock/restock.component';
 import { AuthClickDirective } from './auth-click.directive';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { CartComponent } from './cart/cart.component';
+import { BaseLayoutComponent } from './base-layout/base-layout.component';
+import { SiteLayoutComponent } from './site-layout/site-layout.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,7 +22,10 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     NavbarComponent,
     LoginFormComponent,
     RestockComponent,
-    AuthClickDirective
+    AuthClickDirective,
+    CartComponent,
+    BaseLayoutComponent,
+    SiteLayoutComponent
   ],
   imports: [
     BrowserModule,

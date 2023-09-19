@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CyclesService } from '../service/cycles.service';
 import { Cycle } from '../models/cycle';
 import { AuthService } from '../service/auth.service';
-import { faCoffee,faArrowUp,faArrowDown } from '@fortawesome/free-solid-svg-icons';
+import { faCartShopping,faArrowUp,faArrowDown } from '@fortawesome/free-solid-svg-icons';
 @Component({
   selector: 'app-cycles',
   templateUrl: './cycles.component.html',
@@ -13,7 +13,7 @@ export class CyclesComponent implements OnInit {
   constructor(private cyclesService: CyclesService, public authService: AuthService) { }
   cycles: Cycle[] = [];
   quantityValue: number = 0;
-  faCoffee = faCoffee;
+  faCartShopping = faCartShopping;
   faArrowUp = faArrowUp;
   faArrowDown = faArrowDown;
   ngOnInit(): void {
